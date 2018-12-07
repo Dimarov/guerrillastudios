@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import one from "../images/logo-part-one.png"
-import two from "../images/logo-part-two.png"
-import three from "../images/logo-part-three.png"
+import one from "../images/logo-part-one.png";
+import two from "../images/logo-part-two.png";
+import three from "../images/logo-part-three.png";
 
 const StyledBackground = styled.div`
 	position: fixed;
