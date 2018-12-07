@@ -202,6 +202,7 @@ const CaseContent = () => {
 				<StyledPlayer
 					autoPlay
 					preload="none"
+					position="center"
 					loop
 					poster={logo}
 					src={comeandmeow}
