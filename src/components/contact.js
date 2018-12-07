@@ -132,7 +132,7 @@ const StyledContactFormInput = styled.input`
 	}
 `
 
-const StyledContactFormSubmit = styled.input`
+const StyledContactFormSubmit = styled.button`
 	background: #cc6666;
 	border: .125rem solid #cc6666;
 	padding: 1rem 2rem;
@@ -161,12 +161,13 @@ const Contact = () => (
 					<StyledSocialLink>Facebook</StyledSocialLink>
 				</StyledContactInfoBlock>
 				<StyledContactFormBlock>
-					<StyledContactForm name="contact" method="POST" netlify netlify-honeypot="bot-field">
+					<StyledContactForm name="contact" method="post">
+						<input type="hidden" name="form-name" value="contact" />
 						<StyledContactFormTitle>Full Name</StyledContactFormTitle>
 						<StyledContactFormInput type="name" name="name" placeholder="Ivan Ivanov" />
 						<StyledContactFormTitle>Phone Number</StyledContactFormTitle>
-						<StyledContactFormInput type="number" name="phone" placeholder="050-505-50-50" />
-						<StyledContactFormSubmit type="submit" value="Send" />
+						<StyledContactFormInput type="phone" name="phone" placeholder="050-505-50-50" />
+						<StyledContactFormSubmit type="submit">Send</StyledContactFormSubmit>
 					</StyledContactForm>
 				</StyledContactFormBlock>
 			</StyledContent>
