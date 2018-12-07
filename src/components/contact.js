@@ -165,7 +165,7 @@ const Contact = () => (
 						<StyledContactFormTitle>Full Name</StyledContactFormTitle>
 						<StyledContactFormInput type="name" name="name" placeholder="Ivan Ivanov" />
 						<StyledContactFormTitle>Phone Number</StyledContactFormTitle>
-						<StyledContactFormInput type="number" name"phone" placeholder="050-505-50-50" />
+						<StyledContactFormInput type="number" name="phone" placeholder="050-505-50-50" />
 						<StyledContactFormSubmit type="submit" value="Send" />
 					</StyledContactForm>
 				</StyledContactFormBlock>
