@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import Work from './work'
-import About from './about'
-import Contact from './contact'
+import Work from './work';
+import About from './about';
+import Contact from './contact';
 
 const StyledContent = styled.div`
 	position: relative;
