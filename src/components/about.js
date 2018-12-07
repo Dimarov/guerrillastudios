@@ -79,6 +79,10 @@ const StyledAboutButton = styled.button`
 		width: 100%;
 		opacity: 1;
 	}
+
+	@media screen and (max-width: 60rem) {
+		font-size: 1.5rem;
+	}
 `
 
 const StyledPhotoContainer = styled.div`
@@ -108,12 +112,21 @@ const StyledPerson = styled.div`
 	:hover img {
 		filter: grayscale(0);
 	}
+
+	@media screen and (max-width: 60rem) {
+			width: 100%;
+			height: 20rem;
+	}
 `
 
 const StyledPhoto = styled.img`
 	height: 16rem;
 	filter: grayscale(1);
 	transition: all .1s ease-in;
+
+	@media screen and (max-width: 60rem) {
+		height: 12rem;
+	}
 `
 
 const StyledName = styled.h2`

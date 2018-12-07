@@ -14,7 +14,7 @@ const StyledBackground = styled.div`
 	box-shadow: 0 -0.25rem .5rem rgba(0,0,0,.16);
 
 	@media screen and (max-width: 60rem) {
-		height: 54rem;
+		height: 32rem;
 	}
 `;
 
@@ -39,7 +39,7 @@ const StyledCase = styled.div`
 	height: 47rem;
 
 	@media screen and (max-width: 60rem) {
-		height: 18rem;
+		height: 10rem;
 	}
 `
 const StyledCaseBorder = styled.div`
@@ -52,7 +52,8 @@ const StyledCaseBorder = styled.div`
 
 	@media screen and (max-width: 60rem) {
 		padding: 0rem;
-		height: 16rem;
+		height: 10rem;
+		border: none;
 	}
 `
 const StyledCaseTitle = styled.h2`

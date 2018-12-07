@@ -63,6 +63,11 @@ const StyledContactTitle = styled.h2`
 	font-size: 4rem;
 	color: #fff;
 	margin: 0;
+
+	@media screen and (max-width: 60rem) {
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
 `
 
 const StyledContactText = styled.h2`
@@ -72,6 +77,11 @@ const StyledContactText = styled.h2`
 	font-size: 2rem;
 	color: #fff;
 	margin-top: 3rem;
+
+	@media screen and (max-width: 60rem) {
+		font-size: 1.5rem;
+		margin-top: 1rem;
+	}
 `
 
 const StyledSocialLink = styled.a`
@@ -107,6 +117,7 @@ const StyledSocialLink = styled.a`
 const StyledContactForm = styled.form`
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 2rem;
 `
 
 const StyledContactFormTitle = styled.h3`

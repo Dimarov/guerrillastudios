@@ -31,8 +31,9 @@ const StyledContent = styled.div`
 	align-content: center;
 
 	@media screen and (max-width: 60rem) {
-		grid-template-columns: 100%;
-		grid-template-rows: 18rem 6rem;
+		grid-template-columns: 1fr;
+		grid-template-rows: 10rem 6rem;
+		align-content: flex-start;
 	}
 `
 
@@ -48,7 +49,7 @@ const StyledSlogan = styled.div`
 
 	@media screen and (max-width: 60rem) {
 		width: 100%;
-
+		height: 19rem;
 	}
 `;
 
@@ -74,7 +75,7 @@ const StyledSubSlogan = styled.div`
 	align-items: center;
 
 	@media screen and (max-width: 60rem) {
-		width: 100%;
+		display: none;
 	}
 `;
 
@@ -97,18 +98,40 @@ const StyledAnimatedLogo = styled.div`
 
 	img:first-child {
 		transform: translateY(4rem);
+
+		@media screen and (max-width: 60rem) {
+			transform: translateY(7rem);
+		}
 	}
 
 	img:last-child {
 		transform: translateY(14rem);
+
+		@media screen and (max-width: 60rem) {
+			transform: translateY(12rem);
+		}
 	}
 
 	:hover img:first-child {
 		transform: translateY(0rem);
+
+		@media screen and (max-width: 60rem) {
+			transform: translateY(5rem);
+		}
 	}
 
 	:hover img:last-child {
 		transform: translateY(18rem);
+
+		@media screen and (max-width: 60rem) {
+			transform: translateY(14rem);
+		}
+	}
+
+	@media screen and (max-width: 60rem) {
+		height: 16rem;
+		display: flex;
+		justify-content: center;
 	}
 `
 
@@ -117,6 +140,11 @@ const StyledAnimatedLogoPart = styled.img`
 	position: absolute;
 	transform: translateY(10rem);
 	transition: all .3s ease-in-out;
+
+	@media screen and (max-width: 60rem) {
+		width: 10rem;
+		transform: translateY(10rem);
+	}
 `
 
 const Home = () => (
