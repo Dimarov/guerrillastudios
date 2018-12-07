@@ -161,11 +161,11 @@ const Contact = () => (
 					<StyledSocialLink>Facebook</StyledSocialLink>
 				</StyledContactInfoBlock>
 				<StyledContactFormBlock>
-					<StyledContactForm>
+					<StyledContactForm netlify>
 						<StyledContactFormTitle>Full Name</StyledContactFormTitle>
-						<StyledContactFormInput placeholder="Ivan Ivanov" />
+						<StyledContactFormInput type="name" placeholder="Ivan Ivanov" />
 						<StyledContactFormTitle>Phone Number</StyledContactFormTitle>
-						<StyledContactFormInput placeholder="050-505-50-50" />
+						<StyledContactFormInput type="number" placeholder="050-505-50-50" />
 						<StyledContactFormSubmit type="submit" value="Send" />
 					</StyledContactForm>
 				</StyledContactFormBlock>
