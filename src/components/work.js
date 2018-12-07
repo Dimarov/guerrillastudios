@@ -188,6 +188,10 @@ const StyledViewLink = styled.a`
 
 const StyledPlayer = styled(Player)`
 	height: 100% !important;
+
+	button {
+		display: none !important;
+	}
 `
 
 const CaseContent = () => {
