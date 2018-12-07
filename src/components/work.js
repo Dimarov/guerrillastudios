@@ -1,9 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { Player } from 'video-react';
+
+import "../../node_modules/video-react/dist/video-react.css";
+
+import comeandmeow from "../images/video/comeandmeow.mp4";
+import logo from "../images/guerrilla-black-cube.png";
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: 120rem;
+	height: 70rem;
 	background: #191919;
 	box-shadow: 0 -0.25rem .5rem rgba(0,0,0,.16);
 
@@ -38,7 +44,7 @@ const StyledCase = styled.div`
 `
 const StyledCaseBorder = styled.div`
 	width: 100%;
-	height: 45rem;
+	height: auto;
 	box-sizing: border-box;
 	padding: 4rem;
 	border: .125rem solid rgba(255,255,255,.16);
@@ -69,17 +75,19 @@ const StyledCaseTitle = styled.h2`
 `
 
 const StyledCaseContent = styled.div`
-	height: 100%;
+	height: auto;
 	width: 100%;
 	position: relative;
 `
 
 const StyledPseudoCaseContent = styled.div`
-	height: 100%;
+	height: auto;
 	width: 100%;
 	position: relative;
 	background: #262626;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.32);
+	overflow: hidden;
+	object-fit: cover;
 	transition: all .5s ease-in-out;
 	transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,0,0,1);
 	-webkit-transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,0,0,1);
@@ -149,7 +157,7 @@ const StyledViewLink = styled.a`
 	font-weight: 400;
 	font-size: 1.5rem;
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 	cursor: pointer;
 	z-index: 99;
 
@@ -163,7 +171,7 @@ const StyledViewLink = styled.a`
 		transition: all .3s ease-in;
 		opacity: 0;
 		left: 0;
-		background: #fff;
+		background: #000;
 	}
 
 	:hover:after {
@@ -178,6 +186,10 @@ const StyledViewLink = styled.a`
 	}
 `
 
+const StyledPlayer = styled(Player)`
+	height: 100% !important;
+`
+
 const CaseContent = () => {
 	return (
 		<StyledCaseContent>
@@ -187,7 +199,13 @@ const CaseContent = () => {
 			<StyledPseudoBlockThree />
 			<StyledPseudoBlockFour />
 			<StyledPseudoCaseContent>
-
+				<StyledPlayer
+					autoPlay
+					loop
+					poster={logo}
+					src={comeandmeow}
+					disableCompletely
+				/>
 			</StyledPseudoCaseContent>
 			<StyledViewLink>View Website</StyledViewLink>
 		</StyledCaseContent>
@@ -201,12 +219,6 @@ const Work = () => (
 				<StyledCase>
 					<StyledCaseBorder>
 						<StyledCaseTitle>Come and Meow</StyledCaseTitle>
-						<CaseContent />
-					</StyledCaseBorder>
-				</StyledCase>
-				<StyledCase>
-					<StyledCaseBorder>
-						<StyledCaseTitle>Unity-Bars</StyledCaseTitle>
 						<CaseContent />
 					</StyledCaseBorder>
 				</StyledCase>
