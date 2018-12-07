@@ -161,7 +161,7 @@ const Contact = () => (
 					<StyledSocialLink>Facebook</StyledSocialLink>
 				</StyledContactInfoBlock>
 				<StyledContactFormBlock>
-					<StyledContactForm name="contact" method="post">
+					<StyledContactForm name="contact" method="post" action="/">
 						<input type="hidden" name="form-name" value="contact" />
 						<StyledContactFormTitle>Full Name</StyledContactFormTitle>
 						<StyledContactFormInput type="name" name="name" placeholder="Ivan Ivanov" />
