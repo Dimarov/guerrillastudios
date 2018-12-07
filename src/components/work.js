@@ -5,7 +5,7 @@ import { Player } from 'video-react';
 import "../../node_modules/video-react/dist/video-react.css";
 
 import comeandmeow from "../images/video/comeandmeow.mp4";
-import logo from "../images/guerrilla-black-cube.png";
+import comeandmeowpreview from "../images/comeandmeow.jpg";
 
 const StyledBackground = styled.div`
 	width: 100%;
@@ -209,12 +209,12 @@ const CaseContent = () => {
 					preload="none"
 					position="center"
 					loop
-					poster={logo}
+					poster={comeandmeowpreview}
 					src={comeandmeow}
 					disableCompletely
 				/>
 			</StyledPseudoCaseContent>
-			<StyledViewLink>View Website</StyledViewLink>
+			<StyledViewLink href="https://kor1k.github.io/job_new_coffee_guirrella/">View Website</StyledViewLink>
 		</StyledCaseContent>
 	);
 }

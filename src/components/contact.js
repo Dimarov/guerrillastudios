@@ -5,6 +5,10 @@ const StyledBackground = styled.div`
 	width: 100%;
 	height: 36rem;
 	background: #191919;
+
+	@media screen and (max-width: 60rem) {
+		height: 42rem;
+	}
 `;
 
 const StyledBackgroundContainer = styled.div`
@@ -117,7 +121,7 @@ const StyledSocialLink = styled.a`
 const StyledContactForm = styled.form`
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 2rem;
+	margin-bottom: 2rem;
 `
 
 const StyledContactFormTitle = styled.h3`
@@ -168,8 +172,8 @@ const Contact = () => (
 				<StyledContactInfoBlock>
 					<StyledContactTitle>Contact Us</StyledContactTitle>
 					<StyledContactText>We’ll answer you in less than 3 hours</StyledContactText>
-					<StyledSocialLink>Instagram</StyledSocialLink>
-					<StyledSocialLink>Facebook</StyledSocialLink>
+					<StyledSocialLink href="https://www.instagram.com/guerrilla.creative/">Instagram</StyledSocialLink>
+					<StyledSocialLink href="https://www.facebook.com/Guerrilla-Studios-877863072550834">Facebook</StyledSocialLink>
 				</StyledContactInfoBlock>
 				<StyledContactFormBlock>
 					<StyledContactForm name="contact" method="post" action="/">
