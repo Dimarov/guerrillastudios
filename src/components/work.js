@@ -194,7 +194,7 @@ const CaseContent = () => {
 			<StyledPseudoBlockFour />
 			<StyledPseudoCaseContent>
 				<StyledPseudoCaseContentVideo>
-					<StyledVideo src="https://www.youtube.com/embed/AiaNnBwyYhM?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=AiaNnBwyYhM" frameborder="0" allow="autoplay" allowfullscreen></StyledVideo>
+					<StyledVideo src="https://www.youtube.com/embed/AiaNnBwyYhM?controls=0&showinfo=0&rel=0&autoplay=1&muted=1&loop=1&playlist=AiaNnBwyYhM" frameborder="0" allow="autoplay"></StyledVideo>
 				</StyledPseudoCaseContentVideo>
 			</StyledPseudoCaseContent>
 			<StyledViewLink href="https://kor1k.github.io/job_new_coffee_guirrella/">View Website</StyledViewLink>
