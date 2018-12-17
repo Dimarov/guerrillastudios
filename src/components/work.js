@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: 24rem;
+	height: 32rem;
 	background: #191919;
 	box-shadow: 0 -0.25rem .5rem rgba(0,0,0,.16);
 `;
 
 const StyledBackgroundContainer = styled.div`
-	width: 100%;
+	width: 90%;
 	max-width: 90rem;
 	height: 100%;
 	margin: 0 auto;
@@ -26,11 +26,7 @@ const StyledContent = styled.div`
 
 const StyledCase = styled.div`
 	width: 100%;
-	height: 47rem;
-
-	@media screen and (max-width: 60rem) {
-		height: 10rem;
-	}
+	height: 10rem;
 `
 const StyledCaseBorder = styled.div`
 	width: 100%;
@@ -49,10 +45,10 @@ const StyledCaseBorder = styled.div`
 const StyledCaseTitle = styled.h2`
 	position: absolute;
 	top: -4rem;
-	left: 2rem;
+	left: 0rem;
 	font-size: 2rem;
 	margin: 0;
-	padding: 0 1rem;
+	padding: 0rem;
 	background: #191919;
 	font-family: ff-tisa-web-pro, serif;
 	font-weight: 400;
@@ -153,11 +149,11 @@ const StyledPseudoBlockFour = styled.div`
 
 const StyledViewLink = styled.a`
 	position: absolute;
-	right: 2rem;
-	bottom: 2rem;
+	font-size: 1rem;
+	bottom: 1rem;
+	right: 1rem;
 	font-family: futura-pt, sans-serif;
 	font-weight: 400;
-	font-size: 1.5rem;
 	text-decoration: none;
 	color: #000;
 	cursor: pointer;
@@ -180,25 +176,25 @@ const StyledViewLink = styled.a`
 		width: 100%;
 		opacity: 1;
 	}
+`
 
-	@media screen and (max-width: 60rem) {
-		font-size: 1rem;
-		bottom: 1rem;
-		right: 1rem;
-	}
+const StyledCaseDescription = styled.p`
+	font-size: 1.5rem;
+	color: #fff;
+	font-family: futura-pt, sans-serif;
+	font-weight: 400;
 `
 
 const CaseContent = () => {
 	return (
 		<StyledCaseContent>
-
 			<StyledPseudoBlockOne />
 			<StyledPseudoBlockTwo />
 			<StyledPseudoBlockThree />
 			<StyledPseudoBlockFour />
 			<StyledPseudoCaseContent>
 				<StyledPseudoCaseContentVideo>
-					<StyledVideo src="https://www.youtube.com/embed/AiaNnBwyYhM?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=AiaNnBwyYhM" frameborder="0" allowfullscreen></StyledVideo>
+					<StyledVideo src="https://www.youtube.com/embed/AiaNnBwyYhM?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=AiaNnBwyYhM" frameborder="0" allow="autoplay" allowfullscreen></StyledVideo>
 				</StyledPseudoCaseContentVideo>
 			</StyledPseudoCaseContent>
 			<StyledViewLink href="https://kor1k.github.io/job_new_coffee_guirrella/">View Website</StyledViewLink>
@@ -216,6 +212,7 @@ const Work = () => (
 						<CaseContent />
 					</StyledCaseBorder>
 				</StyledCase>
+				<StyledCaseDescription>Basic Case Description Provided by Dimarov</StyledCaseDescription>
 			</StyledContent>
 		</StyledBackgroundContainer>
 	</StyledBackground>
