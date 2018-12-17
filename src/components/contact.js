@@ -3,12 +3,8 @@ import styled from "styled-components";
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: 36rem;
+	height: 44rem;
 	background: #191919;
-
-	@media screen and (max-width: 60rem) {
-		height: 42rem;
-	}
 `;
 
 const StyledBackgroundContainer = styled.div`
@@ -32,60 +28,41 @@ const StyledContent = styled.div`
 `
 
 const StyledContactInfoBlock = styled.div`
-	width: 50%;
-	height: 100%;
+	width: 100%;
+	height: auto;
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-
-	@media screen and (max-width: 60rem) {
-		width: 100%;
-		height: auto;
-	}
 `
 
 const StyledContactFormBlock = styled.div`
-	width: 50%;
-	height: 100%;
+	width: 100%;
+	height: auto;
 	display: flex;
 	align-content: flex-start;
 	align-items: center;
 	justify-content: center;
-
-	@media screen and (max-width: 60rem) {
-		width: 100%;
-		height: auto;
-	}
 `
 
 const StyledContactTitle = styled.h2`
 	text-align: center;
 	font-family: ff-tisa-web-pro, serif;
 	font-weight: 400;
-	font-size: 4rem;
+	font-size: 2rem;
+	margin-top: 2rem;
 	color: #fff;
 	margin: 0;
-
-	@media screen and (max-width: 60rem) {
-		font-size: 2rem;
-		margin-top: 2rem;
-	}
 `
 
 const StyledContactText = styled.h2`
 	flex: 0 0 100%;
 	font-family: futura-pt, sans-serif;
 	font-weight: 400;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: #fff;
-	margin-top: 3rem;
-
-	@media screen and (max-width: 60rem) {
-		font-size: 1.5rem;
-		margin-top: 1rem;
-	}
+	margin-top: 1rem;
 `
 
 const StyledSocialLink = styled.a`

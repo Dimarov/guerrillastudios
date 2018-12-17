@@ -1,25 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Player } from 'video-react';
-
-import "../../node_modules/video-react/dist/video-react.css";
-
-import comeandmeow from "../images/video/comeandmeow.mp4";
-import comeandmeowpreview from "../images/comeandmeow.jpg";
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: 70rem;
+	height: 24rem;
 	background: #191919;
 	box-shadow: 0 -0.25rem .5rem rgba(0,0,0,.16);
-
-	@media screen and (max-width: 60rem) {
-		height: 32rem;
-	}
 `;
 
 const StyledBackgroundContainer = styled.div`
-	width: 90%;
+	width: 100%;
 	max-width: 90rem;
 	height: 100%;
 	margin: 0 auto;
@@ -58,21 +48,15 @@ const StyledCaseBorder = styled.div`
 `
 const StyledCaseTitle = styled.h2`
 	position: absolute;
-	top: -2rem;
-	left: 4rem;
+	top: -4rem;
+	left: 2rem;
+	font-size: 2rem;
 	margin: 0;
 	padding: 0 1rem;
 	background: #191919;
 	font-family: ff-tisa-web-pro, serif;
 	font-weight: 400;
-	font-size: 2rem;
 	color: #fff;
-
-	@media screen and (max-width: 60rem) {
-		top: -3rem;
-		left: 0rem;
-		font-size: 1.5rem;
-	}
 `
 
 const StyledCaseContent = styled.div`
@@ -82,16 +66,33 @@ const StyledCaseContent = styled.div`
 `
 
 const StyledPseudoCaseContent = styled.div`
-	height: auto;
+	height: 14rem;
 	width: 100%;
 	position: relative;
 	background: #262626;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.32);
-	overflow: hidden;
-	object-fit: cover;
+	top: 0; right: 0; bottom: 0; left: 0;
 	transition: all .5s ease-in-out;
 	transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,0,0,1);
 	-webkit-transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,0,0,1);
+`
+
+const StyledPseudoCaseContentVideo = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+`
+
+const StyledVideo = styled.iframe`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
 `
 
 const StyledPseudoBlockOne = styled.div`
@@ -187,14 +188,6 @@ const StyledViewLink = styled.a`
 	}
 `
 
-const StyledPlayer = styled(Player)`
-	height: 100% !important;
-
-	button {
-		display: none !important;
-	}
-`
-
 const CaseContent = () => {
 	return (
 		<StyledCaseContent>
@@ -204,15 +197,9 @@ const CaseContent = () => {
 			<StyledPseudoBlockThree />
 			<StyledPseudoBlockFour />
 			<StyledPseudoCaseContent>
-				<StyledPlayer
-					autoPlay
-					preload="none"
-					position="center"
-					loop
-					poster={comeandmeowpreview}
-					src={comeandmeow}
-					disableCompletely
-				/>
+				<StyledPseudoCaseContentVideo>
+					<StyledVideo src="https://www.youtube.com/embed/AiaNnBwyYhM?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=AiaNnBwyYhM" frameborder="0" allowfullscreen></StyledVideo>
+				</StyledPseudoCaseContentVideo>
 			</StyledPseudoCaseContent>
 			<StyledViewLink href="https://kor1k.github.io/job_new_coffee_guirrella/">View Website</StyledViewLink>
 		</StyledCaseContent>

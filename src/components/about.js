@@ -26,28 +26,20 @@ const StyledBackgroundContainer = styled.div`
 
 const StyledContent = styled.div`
 	height: 100%;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
-	@media screen and (max-width: 60rem) {
-		width: 100%;
-	}
 `
 
 const StyledAboutText = styled.h2`
 	text-align: center;
 	font-family: ff-tisa-web-pro, serif;
 	font-weight: 600;
-	font-size: 4rem;
+	font-size: 2rem;
 	color: #fff;
-
-	@media screen and (max-width: 60rem) {
-		font-size: 2rem;
-	}
 `
 
 const StyledAboutButton = styled.button`
@@ -55,7 +47,8 @@ const StyledAboutButton = styled.button`
 	border: none;
 	font-family: futura-pt, sans-serif;
 	font-weight: 400;
-	font-size: 2rem;
+	font-size: 1.5rem;
+	margin: 2rem 0;
 	text-decoration: none;
 	color: #fff;
 	padding: 0;
@@ -79,10 +72,6 @@ const StyledAboutButton = styled.button`
 		width: 100%;
 		opacity: 1;
 	}
-
-	@media screen and (max-width: 60rem) {
-		font-size: 1.5rem;
-	}
 `
 
 const StyledPhotoContainer = styled.div`
@@ -95,8 +84,8 @@ const StyledPhotoContainer = styled.div`
 `
 
 const StyledPerson = styled.div`
-	width: 30%;
-	height: 28rem;
+	width: 100%;
+	height: 20rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -112,21 +101,12 @@ const StyledPerson = styled.div`
 	:hover img {
 		filter: grayscale(0);
 	}
-
-	@media screen and (max-width: 60rem) {
-			width: 100%;
-			height: 20rem;
-	}
 `
 
 const StyledPhoto = styled.img`
-	height: 16rem;
+	height: 12rem;
 	filter: grayscale(1);
 	transition: all .1s ease-in;
-
-	@media screen and (max-width: 60rem) {
-		height: 12rem;
-	}
 `
 
 const StyledName = styled.h2`

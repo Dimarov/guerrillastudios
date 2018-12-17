@@ -6,12 +6,10 @@ import two from "../images/logo-part-two.png";
 import three from "../images/logo-part-three.png";
 
 const StyledBackground = styled.div`
-	position: fixed;
 	width: 100%;
-	height: 100vh;
+	height: 44rem;
 	padding-top: 4rem;
 	background: linear-gradient(#1A1A1A, #121212);
-	z-index: 1;
 `;
 
 const StyledBackgroundContainer = styled.div`
@@ -24,74 +22,52 @@ const StyledBackgroundContainer = styled.div`
 const StyledContent = styled.div`
 	height: 100%;
 	width: 100%;
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto;
-	justify-content: space-between;
-	align-content: center;
-
-	@media screen and (max-width: 60rem) {
-		grid-template-columns: 1fr;
-		grid-template-rows: 10rem 6rem;
-		align-content: flex-start;
-	}
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 `
 
 const StyledSlogan = styled.div`
-	width: 54rem;
+	width: 100%;
 	box-sizing: border-box;
-	height: 19rem;
+	height: 12rem;
 	padding: 3rem;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	${'' /* background: #cc6666; */}
-
-	@media screen and (max-width: 60rem) {
-		width: 100%;
-		height: 19rem;
-	}
 `;
 
 const StyledSloganText = styled.h2`
 	font-family: futura-pt, sans-serif;
 	font-weight: 700;
-	font-size: 5rem;
+	font-size: 2.5rem;
 	color: #cc6666;
-
-	@media screen and (max-width: 60rem) {
-		font-size: 2.5rem;
-	}
 `;
 
 const StyledSubSlogan = styled.div`
-	width: 48rem;
-	height: 12rem;
+	width: 100%;
+	height: 8rem;
 	box-sizing: border-box;
 	padding: 3rem;
-	grid-row-start: 2;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-
-	@media screen and (max-width: 60rem) {
-		display: none;
-	}
 `;
 
 const StyledSubSloganText = styled.h3`
 	font-family: ff-tisa-web-pro, serif;
 	font-weight: 400;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: #fff;
-
-	@media screen and (max-width: 60rem) {
-		font-size: 1.5rem;
-	}
 `;
 
+const StyledAnimatedLogoContainer = styled.div`
+	height: 16rem;
+	width: 100%;
+`
+
 const StyledAnimatedLogo = styled.div`
-	height: 32rem;
+	height: 16rem;
+	display: flex;
+	justify-content: center;
 	position: relative;
 	cursor: pointer;
 	transition: all .3s ease-in-out;
@@ -127,24 +103,13 @@ const StyledAnimatedLogo = styled.div`
 			transform: translateY(14rem);
 		}
 	}
-
-	@media screen and (max-width: 60rem) {
-		height: 16rem;
-		display: flex;
-		justify-content: center;
-	}
 `
 
 const StyledAnimatedLogoPart = styled.img`
-	width: 20rem;
+	width: 10rem;
 	position: absolute;
 	transform: translateY(10rem);
 	transition: all .3s ease-in-out;
-
-	@media screen and (max-width: 60rem) {
-		width: 10rem;
-		transform: translateY(10rem);
-	}
 `
 
 const Home = () => (
@@ -163,11 +128,13 @@ const Home = () => (
 						</StyledSubSloganText>
 					</StyledSubSlogan>
 				</div>
-				<StyledAnimatedLogo>
-					<StyledAnimatedLogoPart src={one} />
-					<StyledAnimatedLogoPart src={two} />
-					<StyledAnimatedLogoPart src={three} />
-				</StyledAnimatedLogo>
+				<StyledAnimatedLogoContainer>
+					<StyledAnimatedLogo>
+						<StyledAnimatedLogoPart src={one} />
+						<StyledAnimatedLogoPart src={two} />
+						<StyledAnimatedLogoPart src={three} />
+					</StyledAnimatedLogo>
+				</StyledAnimatedLogoContainer>
 			</StyledContent>
 		</StyledBackgroundContainer>
 	</StyledBackground>
