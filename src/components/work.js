@@ -98,6 +98,7 @@ const StyledPseudoBlockOne = styled.div`
 	left: 0;
 	top: 0;
 	z-index: 90;
+	display: none;
 
 	:hover ~ div {
 		transform: matrix3d(1,0,0.00,-0.00002,0.00,1,0.00,-0.00002,0,0,1,0,0,0,0,1);
@@ -112,6 +113,7 @@ const StyledPseudoBlockTwo = styled.div`
 	left: 50%;
 	top: 0;
 	z-index: 90;
+	display: none;
 
 	:hover ~ div {
 		transform: matrix3d(1,0,0.00,0.00002,0.00,1,0.00,-0.00002,0,0,1,0,0,0,0,1);
@@ -126,6 +128,7 @@ const StyledPseudoBlockThree = styled.div`
 	left: 0;
 	top: 50%;
 	z-index: 90;
+	display: none;
 
 	:hover ~ div {
 		transform: matrix3d(1,0,0.00,-0.00002,0.00,1,0.00,0.00002,0,0,1,0,0,0,0,1);
@@ -140,6 +143,7 @@ const StyledPseudoBlockFour = styled.div`
 	left: 50%;
 	top: 50%;
 	z-index: 90;
+	display: none;
 
 	:hover ~ div {
 		transform: matrix3d(1,0,0.00,0.00002,0.00,1,0.00,0.00002,0,0,1,0,0,0,0,1);
