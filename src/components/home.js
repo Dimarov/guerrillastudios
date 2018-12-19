@@ -158,6 +158,30 @@ const StyledAnimatedLogoPart = styled.img`
 	}
 `
 
+const StyledArrow = styled.div`
+	display: none;
+
+	@media (min-width: 80.0rem) {
+		display: block;
+		position: relative;
+		bottom: 12rem;
+		left: 50%;
+		height: 3rem;
+		width: 3rem;
+		transform: rotate(45deg) translate(-50%, 0);
+		border-right: .25rem solid #fff;
+		border-bottom: .25rem solid #fff;
+		border-radius: .125rem;
+		animation: arrow 1s infinite ease-in-out;
+
+		@keyframes arrow {
+			0% {bottom: 12rem;}
+			50% {bottom: 11rem;}
+			100% {bottom: 12rem;}
+		}
+	}
+`
+
 const Home = () => (
 	<StyledBackground>
 		<StyledBackgroundContainer>
@@ -182,6 +206,7 @@ const Home = () => (
 					</StyledAnimatedLogo>
 				</StyledAnimatedLogoContainer>
 			</StyledContent>
+			<StyledArrow />
 		</StyledBackgroundContainer>
 	</StyledBackground>
 );
