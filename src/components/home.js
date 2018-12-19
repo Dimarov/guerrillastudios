@@ -10,6 +10,10 @@ const StyledBackground = styled.div`
 	height: 44rem;
 	padding-top: 4rem;
 	background: linear-gradient(#1A1A1A, #121212);
+
+	@media (min-width: 80.0rem) {
+		height: 100vh;
+	}
 `;
 
 const StyledBackgroundContainer = styled.div`
@@ -25,6 +29,21 @@ const StyledContent = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+
+	@media (min-width: 80.0rem) {
+		flex-direction: row;
+	}
+`
+
+const StyledSloganContainer = styled.div`
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: 80.0rem) {
+		height: 100%;
+	}
 `
 
 const StyledSlogan = styled.div`
@@ -34,6 +53,12 @@ const StyledSlogan = styled.div`
 	padding: 3rem;
 	display: flex;
 	justify-content: center;
+
+	@media (min-width: 80.0rem) {
+		width: 100%;
+		height: 24rem;
+		justify-content: flex-start;
+	}
 `;
 
 const StyledSloganText = styled.h2`
@@ -41,6 +66,10 @@ const StyledSloganText = styled.h2`
 	font-weight: 700;
 	font-size: 2.5rem;
 	color: #cc6666;
+
+	@media (min-width: 80.0rem) {
+		font-size: 6rem;
+	}
 `;
 
 const StyledSubSlogan = styled.div`
@@ -50,6 +79,11 @@ const StyledSubSlogan = styled.div`
 	padding: 3rem;
 	display: flex;
 	justify-content: center;
+
+	@media (min-width: 80.0rem) {
+		width: 100%;
+		justify-content: flex-start;
+	}
 `;
 
 const StyledSubSloganText = styled.h3`
@@ -57,11 +91,20 @@ const StyledSubSloganText = styled.h3`
 	font-weight: 400;
 	font-size: 1.5rem;
 	color: #fff;
+
+	@media (min-width: 80.0rem) {
+		font-size: 2rem;
+	}
 `;
 
 const StyledAnimatedLogoContainer = styled.div`
-	height: 16rem;
+	height: 32rem;
 	width: 100%;
+
+	@media (min-width: 80.0rem) {
+		width: 50%;
+		padding: 4rem 0;
+	}
 `
 
 const StyledAnimatedLogo = styled.div`
@@ -69,40 +112,39 @@ const StyledAnimatedLogo = styled.div`
 	display: flex;
 	justify-content: center;
 	position: relative;
-	cursor: pointer;
 	transition: all .3s ease-in-out;
 
-	img:first-child {
-		transform: translateY(4rem);
+	@media screen and (min-width: 80rem) {
+		 cursor: pointer;
+	}
 
-		@media screen and (max-width: 60rem) {
-			transform: translateY(7rem);
+	img:first-child {
+		transform: translateY(7rem);
+
+		@media screen and (min-width: 80rem) {
+			transform: translateY(4rem);
 		}
 	}
 
 	img:last-child {
-		transform: translateY(14rem);
+		transform: translateY(12rem);
 
-		@media screen and (max-width: 60rem) {
-			transform: translateY(12rem);
-		}
-	}
-
-	:hover img:first-child {
-		transform: translateY(0rem);
-
-		@media screen and (max-width: 60rem) {
-			transform: translateY(5rem);
-		}
-	}
-
-	:hover img:last-child {
-		transform: translateY(18rem);
-
-		@media screen and (max-width: 60rem) {
+		@media screen and (min-width: 80rem) {
 			transform: translateY(14rem);
 		}
 	}
+
+	@media (min-width: 80.0rem) {
+		:hover img:first-child {
+			transform: translateY(0rem);
+		}
+
+		:hover img:last-child {
+			transform: translateY(18rem);
+		}
+	}
+
+
 `
 
 const StyledAnimatedLogoPart = styled.img`
@@ -110,13 +152,17 @@ const StyledAnimatedLogoPart = styled.img`
 	position: absolute;
 	transform: translateY(10rem);
 	transition: all .3s ease-in-out;
+
+	@media (min-width: 80.0rem) {
+		width: 20rem;
+	}
 `
 
 const Home = () => (
 	<StyledBackground>
 		<StyledBackgroundContainer>
 			<StyledContent>
-				<div>
+				<StyledSloganContainer>
 					<StyledSlogan>
 						<StyledSloganText>
 							Modern way to style your business.
@@ -127,7 +173,7 @@ const Home = () => (
 							Take your product to the next level with Guerrilla Studios
 						</StyledSubSloganText>
 					</StyledSubSlogan>
-				</div>
+				</StyledSloganContainer>
 				<StyledAnimatedLogoContainer>
 					<StyledAnimatedLogo>
 						<StyledAnimatedLogoPart src={one} />

@@ -40,6 +40,10 @@ const StyledAboutText = styled.h2`
 	font-weight: 600;
 	font-size: 2rem;
 	color: #fff;
+
+	@media (min-width: 80.0rem) {
+		font-size: 4rem;
+	}
 `
 
 const StyledAboutButton = styled.button`
@@ -55,22 +59,28 @@ const StyledAboutButton = styled.button`
 	position: relative;
 	cursor: pointer;
 
-	:after {
-		content: "";
-		position: absolute;
-		bottom: -.25rem;
-		width: 0px;
-		height: .125rem;
-		margin: .125rem 0 0;
-		transition: all .3s ease-in;
-		opacity: 0;
-		left: 0;
-		background: #fff;
+	@media (min-width: 80.0rem) {
+		font-size: 2rem;
 	}
 
-	:hover:after {
-		width: 100%;
-		opacity: 1;
+	@media (min-width: 80.0rem) {
+		:after {
+			content: "";
+			position: absolute;
+			bottom: -.25rem;
+			width: 0px;
+			height: .125rem;
+			margin: .125rem 0 0;
+			transition: all .3s ease-in;
+			opacity: 0;
+			left: 0;
+			background: #fff;
+		}
+
+		:hover:after {
+			width: 100%;
+			opacity: 1;
+		}
 	}
 `
 
@@ -94,19 +104,34 @@ const StyledPerson = styled.div`
 	transition: all .1s ease-in;
 	transform: scale3d(.95, .95, .95);
 
-	:hover {
-		transform: scale3d(1, 1, 1);
+	@media (min-width: 40.0rem) {
+		width: 50%;
 	}
 
-	:hover img {
-		filter: grayscale(0);
+	@media (min-width: 80.0rem) {
+		width: calc(100%/3);
+		height: 32rem;
+	}
+
+	@media (min-width: 80.0rem) {
+		:hover {
+			transform: scale3d(1, 1, 1);
+		}
+
+		:hover img {
+			filter: grayscale(0);
+		}
 	}
 `
 
 const StyledPhoto = styled.img`
 	height: 12rem;
-	filter: grayscale(1);
 	transition: all .1s ease-in;
+
+	@media (min-width: 80.0rem) {
+		height: 16rem;
+		filter: grayscale(1);
+	}
 `
 
 const StyledName = styled.h2`

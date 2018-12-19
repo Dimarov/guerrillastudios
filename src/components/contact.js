@@ -33,7 +33,7 @@ const StyledContactInfoBlock = styled.div`
 	display: flex;
 	align-content: center;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
 	flex-wrap: wrap;
 `
 
@@ -52,7 +52,7 @@ const StyledContactTitle = styled.h2`
 	font-weight: 400;
 	font-size: 2rem;
 	margin-top: 2rem;
-	color: #fff;
+	color: #cc6666;
 	margin: 0;
 `
 
@@ -61,6 +61,7 @@ const StyledContactText = styled.h2`
 	font-family: futura-pt, sans-serif;
 	font-weight: 400;
 	font-size: 1.5rem;
+	text-align: center;
 	color: #fff;
 	margin-top: 1rem;
 `
@@ -73,8 +74,7 @@ const StyledSocialLink = styled.a`
 	color: #fff;
 	position: relative;
 	cursor: pointer;
-	margin-right: 2rem;
-	margin-top: 2rem;
+	margin: 2rem 2rem 0;
 
 	:after {
 		content: "";

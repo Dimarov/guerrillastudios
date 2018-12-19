@@ -3,9 +3,13 @@ import styled from "styled-components";
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: 32rem;
+	height: 48rem;
 	background: #191919;
 	box-shadow: 0 -0.25rem .5rem rgba(0,0,0,.16);
+
+	@media (min-width: 80.0rem) {
+		height: 64rem;
+	}
 `;
 
 const StyledBackgroundContainer = styled.div`
@@ -26,7 +30,15 @@ const StyledContent = styled.div`
 
 const StyledCase = styled.div`
 	width: 100%;
-	height: 10rem;
+	height: 14rem;
+
+	@media (min-width: 40.0rem) {
+		height: 24rem;
+	}
+
+	@media (min-width: 80.0rem) {
+		height: 42rem;
+	}
 `
 const StyledCaseBorder = styled.div`
 	width: 100%;
@@ -53,6 +65,12 @@ const StyledCaseTitle = styled.h2`
 	font-family: ff-tisa-web-pro, serif;
 	font-weight: 400;
 	color: #fff;
+
+	@media (min-width: 80.0rem) {
+		top: -2rem;
+		left: 4rem;
+		padding: 0 1rem;
+	}
 `
 
 const StyledCaseContent = styled.div`
@@ -71,18 +89,17 @@ const StyledPseudoCaseContent = styled.div`
 	transition: all .5s ease-in-out;
 	transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,0,0,1);
 	-webkit-transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,0,0,1);
+
+	@media screen and (min-width: 40.0rem) {
+		height: 24rem;
+	}
+
+	@media (min-width: 80.0rem) {
+		height: 36rem;
+	}
 `
 
 const StyledPseudoCaseContentVideo = styled.div`
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-`
-
-const StyledVideo = styled.iframe`
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -104,6 +121,10 @@ const StyledPseudoBlockOne = styled.div`
 		transform: matrix3d(1,0,0.00,-0.00002,0.00,1,0.00,-0.00002,0,0,1,0,0,0,0,1);
 		-webkit-transform: matrix3d(1,0,0.00,-0.00002,0.00,1,0.00,-0.00002,0,0,1,0,0,0,0,1);
 	}
+
+	@media (min-width: 80.0rem) {
+		display: block;
+	}
 `
 
 const StyledPseudoBlockTwo = styled.div`
@@ -118,6 +139,10 @@ const StyledPseudoBlockTwo = styled.div`
 	:hover ~ div {
 		transform: matrix3d(1,0,0.00,0.00002,0.00,1,0.00,-0.00002,0,0,1,0,0,0,0,1);
 		-webkit-transform: matrix3d(1,0,0.00,0.00002,0.00,1,0.00,-0.00002,0,0,1,0,0,0,0,1);
+	}
+
+	@media (min-width: 80.0rem) {
+		display: block;
 	}
 `
 
@@ -134,6 +159,10 @@ const StyledPseudoBlockThree = styled.div`
 		transform: matrix3d(1,0,0.00,-0.00002,0.00,1,0.00,0.00002,0,0,1,0,0,0,0,1);
 		-webkit-transform: matrix3d(1,0,0.00,-0.00002,0.00,1,0.00,0.00002,0,0,1,0,0,0,0,1);
 	}
+
+	@media (min-width: 80.0rem) {
+		display: block;
+	}
 `
 
 const StyledPseudoBlockFour = styled.div`
@@ -149,6 +178,10 @@ const StyledPseudoBlockFour = styled.div`
 		transform: matrix3d(1,0,0.00,0.00002,0.00,1,0.00,0.00002,0,0,1,0,0,0,0,1);
 		-webkit-transform: matrix3d(1,0,0.00,0.00002,0.00,1,0.00,0.00002,0,0,1,0,0,0,0,1);
 	}
+
+	@media (min-width: 80.0rem) {
+		display: block;
+	}
 `
 
 const StyledViewLink = styled.a`
@@ -163,22 +196,30 @@ const StyledViewLink = styled.a`
 	cursor: pointer;
 	z-index: 99;
 
-	:after {
-		content: "";
-		position: absolute;
-		bottom: -.25rem;
-		width: 0px;
-		height: .125rem;
-		margin: .125rem 0 0;
-		transition: all .3s ease-in;
-		opacity: 0;
-		left: 0;
-		background: #000;
+	@media (min-width: 80.0rem) {
+		font-size: 2rem;
+		bottom: 2rem;
+		right: 4rem;
 	}
 
-	:hover:after {
-		width: 100%;
-		opacity: 1;
+	@media (min-width: 80.0rem) {
+		:after {
+			content: "";
+			position: absolute;
+			bottom: -.25rem;
+			width: 0px;
+			height: .125rem;
+			margin: .125rem 0 0;
+			transition: all .3s ease-in;
+			opacity: 0;
+			left: 0;
+			background: #000;
+		}
+
+		:hover:after {
+			width: 100%;
+			opacity: 1;
+		}
 	}
 `
 
@@ -198,7 +239,7 @@ const CaseContent = () => {
 			<StyledPseudoBlockFour />
 			<StyledPseudoCaseContent>
 				<StyledPseudoCaseContentVideo>
-					<StyledVideo src="https://www.youtube.com/embed/AiaNnBwyYhM?controls=0&showinfo=0&rel=0&autoplay=1&muted=1&loop=1&playlist=AiaNnBwyYhM" frameborder="0" allow="autoplay"></StyledVideo>
+
 				</StyledPseudoCaseContentVideo>
 			</StyledPseudoCaseContent>
 			<StyledViewLink href="https://kor1k.github.io/job_new_coffee_guirrella/">View Website</StyledViewLink>
