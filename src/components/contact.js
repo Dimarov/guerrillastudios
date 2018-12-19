@@ -35,6 +35,10 @@ const StyledContactInfoBlock = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+
+	@media (min-width: 80.0rem) {
+		justify-content: flex-start;
+	}
 `
 
 const StyledContactFormBlock = styled.div`
@@ -54,6 +58,10 @@ const StyledContactTitle = styled.h2`
 	margin-top: 2rem;
 	color: #cc6666;
 	margin: 0;
+
+	@media (min-width: 80.0rem) {
+		font-size: 4rem;
+	}
 `
 
 const StyledContactText = styled.h2`
@@ -64,6 +72,11 @@ const StyledContactText = styled.h2`
 	text-align: center;
 	color: #fff;
 	margin-top: 1rem;
+
+	@media (min-width: 80.0rem) {
+		font-size: 2rem;
+		text-align: left;
+	}
 `
 
 const StyledSocialLink = styled.a`
@@ -76,22 +89,26 @@ const StyledSocialLink = styled.a`
 	cursor: pointer;
 	margin: 2rem 2rem 0;
 
-	:after {
-		content: "";
-		position: absolute;
-		bottom: -.25rem;
-		width: 0px;
-		height: .125rem;
-		margin: .125rem 0 0;
-		transition: all .3s ease-in;
-		opacity: 0;
-		left: 0;
-		background: #fff;
-	}
+	@media (min-width: 80.0rem) {
+		margin: 0 2rem 0 0;
 
-	:hover:after {
-		width: 100%;
-		opacity: 1;
+		:after {
+			content: "";
+			position: absolute;
+			bottom: -.25rem;
+			width: 0px;
+			height: .125rem;
+			margin: .125rem 0 0;
+			transition: all .3s ease-in;
+			opacity: 0;
+			left: 0;
+			background: #fff;
+		}
+
+		:hover:after {
+			width: 100%;
+			opacity: 1;
+		}
 	}
 `
 

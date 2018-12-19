@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import test from "../images/test.jpg"
+
 const StyledBackground = styled.div`
 	width: 100%;
 	height: 48rem;
@@ -101,11 +103,22 @@ const StyledPseudoCaseContent = styled.div`
 
 const StyledPseudoCaseContentVideo = styled.div`
 	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
+	background-image: url(${test});
+	background-size: cover;
+	background-position: center top;
+
+	@media (min-width: 80.0rem) {
+		animation: mymove 20s infinite;
+
+		@keyframes mymove {
+		  0% {background-position: center top;}
+		  50% {background-position: center bottom;}
+			100% {background-position: center top;}
+		}
+	}
 `
 
 const StyledPseudoBlockOne = styled.div`
@@ -184,22 +197,63 @@ const StyledPseudoBlockFour = styled.div`
 	}
 `
 
-const StyledViewLink = styled.a`
+const StyledWebLink = styled.a`
 	position: absolute;
-	font-size: 1rem;
-	bottom: 1rem;
-	right: 1rem;
+	font-size: 1.5rem;
+	bottom: -3rem;
+	right: 0;
 	font-family: futura-pt, sans-serif;
 	font-weight: 400;
 	text-decoration: none;
-	color: #000;
+	color: #fff;
 	cursor: pointer;
 	z-index: 99;
 
 	@media (min-width: 80.0rem) {
-		font-size: 2rem;
+		color: #000;
+		font-size: 1.5rem;
 		bottom: 2rem;
 		right: 4rem;
+	}
+
+	@media (min-width: 80.0rem) {
+		:after {
+			content: "";
+			position: absolute;
+			bottom: -.25rem;
+			width: 0px;
+			height: .125rem;
+			margin: .125rem 0 0;
+			transition: all .3s ease-in;
+			opacity: 0;
+			left: 0;
+			background: #000;
+		}
+
+		:hover:after {
+			width: 100%;
+			opacity: 1;
+		}
+	}
+`
+
+const StyledInstaLink = styled.a`
+	position: absolute;
+	font-size: 1.5rem;
+	bottom: -3rem;
+	right: 6rem;
+	font-family: futura-pt, sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	z-index: 99;
+
+	@media (min-width: 80.0rem) {
+		color: #000;
+		font-size: 1.5rem;
+		bottom: 2rem;
+		right: 12rem;
 	}
 
 	@media (min-width: 80.0rem) {
@@ -242,7 +296,8 @@ const CaseContent = () => {
 
 				</StyledPseudoCaseContentVideo>
 			</StyledPseudoCaseContent>
-			<StyledViewLink href="https://kor1k.github.io/job_new_coffee_guirrella/">View Website</StyledViewLink>
+			<StyledWebLink href="https://kor1k.github.io/job_new_coffee_guirrella/">Website</StyledWebLink>
+			<StyledInstaLink href="https://www.instagram.com/comeandmeow/">Instagram</StyledInstaLink>
 		</StyledCaseContent>
 	);
 }
@@ -257,7 +312,10 @@ const Work = () => (
 						<CaseContent />
 					</StyledCaseBorder>
 				</StyledCase>
-				<StyledCaseDescription>Basic Case Description Provided by Dimarov</StyledCaseDescription>
+				<StyledCaseDescription>
+					Come and Meow<br />
+					Best coffee and food in a refined but relaxed setting.<br/>
+				</StyledCaseDescription>
 			</StyledContent>
 		</StyledBackgroundContainer>
 	</StyledBackground>
