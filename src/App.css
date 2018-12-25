@@ -6,7 +6,7 @@
 }
 
 .team-enter.team-enter-active {
-  height: 56rem !important;
+  height: 12rem !important;
   opacity: 1;
   transition: height 0.3s ease-in, opacity 0.2s ease-in 0.3s;
 }

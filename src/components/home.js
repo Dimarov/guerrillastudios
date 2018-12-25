@@ -8,7 +8,7 @@ import three from "../images/logo-part-three.png";
 const StyledBackground = styled.div`
 	width: 100%;
 	height: 44rem;
-	padding-top: 4rem;
+	padding-top: 2rem;
 	background: linear-gradient(#1A1A1A, #121212);
 
 	@media (min-width: 80.0rem) {
@@ -37,7 +37,7 @@ const StyledContent = styled.div`
 
 const StyledSloganContainer = styled.div`
 	width: 100%;
-	height: 50%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 
@@ -50,13 +50,12 @@ const StyledSlogan = styled.div`
 	width: 100%;
 	box-sizing: border-box;
 	height: 12rem;
-	padding: 3rem;
+	padding: 3rem 1rem;
 	display: flex;
-	justify-content: center;
 
 	@media (min-width: 80.0rem) {
 		width: 100%;
-		height: 24rem;
+		height: 28rem;
 		justify-content: flex-start;
 	}
 `;
@@ -74,9 +73,9 @@ const StyledSloganText = styled.h2`
 
 const StyledSubSlogan = styled.div`
 	width: 100%;
-	height: 8rem;
+	height: 10rem;
 	box-sizing: border-box;
-	padding: 3rem;
+	padding: 3rem 1rem;
 	display: flex;
 	justify-content: center;
 
@@ -100,8 +99,10 @@ const StyledSubSloganText = styled.h3`
 const StyledAnimatedLogoContainer = styled.div`
 	height: 32rem;
 	width: 100%;
+	display: none;
 
 	@media (min-width: 80.0rem) {
+		display: block;
 		width: 50%;
 		padding: 4rem 0;
 	}
@@ -112,7 +113,7 @@ const StyledAnimatedLogo = styled.div`
 	display: flex;
 	justify-content: center;
 	position: relative;
-	transition: all .3s ease-in-out;
+	transition: logo .3s ease-in-out;
 
 	@media screen and (min-width: 80rem) {
 		 cursor: pointer;
@@ -164,20 +165,20 @@ const StyledArrow = styled.div`
 	@media (min-width: 80.0rem) {
 		display: block;
 		position: relative;
-		bottom: 12rem;
+		bottom: 8rem;
 		left: 50%;
-		height: 3rem;
-		width: 3rem;
+		height: 1rem;
+		width: 1rem;
 		transform: rotate(45deg) translate(-50%, 0);
-		border-right: .25rem solid #fff;
-		border-bottom: .25rem solid #fff;
+		border-right: .25rem solid #cc6666;
+		border-bottom: .25rem solid #cc6666;
 		border-radius: .125rem;
 		animation: arrow 1s infinite ease-in-out;
 
 		@keyframes arrow {
-			0% {bottom: 12rem;}
-			50% {bottom: 11rem;}
-			100% {bottom: 12rem;}
+			0% {bottom: 8rem;}
+			50% {bottom: 7rem;}
+			100% {bottom: 8rem;}
 		}
 	}
 `
@@ -189,12 +190,14 @@ const Home = () => (
 				<StyledSloganContainer>
 					<StyledSlogan>
 						<StyledSloganText>
-							Modern way to style your business.
+							Technology. <br />
+							Passion. <br />
+							Marketing.
 						</StyledSloganText>
 					</StyledSlogan>
 					<StyledSubSlogan>
 						<StyledSubSloganText>
-							Take your product to the next level with Guerrilla Studios
+							Guerrilla studios — is a business investment that enabling you to shift from spontaneous ad campaigns to consistent brand management, multiply conversion and recognition.
 						</StyledSubSloganText>
 					</StyledSubSlogan>
 				</StyledSloganContainer>

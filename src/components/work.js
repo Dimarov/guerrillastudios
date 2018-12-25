@@ -5,12 +5,12 @@ import test from "../images/test.jpg"
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: 48rem;
+	height: ${props => props.isOpen ? "82rem" : "24rem"};
 	background: #191919;
 	box-shadow: 0 -0.25rem .5rem rgba(0,0,0,.16);
 
 	@media (min-width: 80.0rem) {
-		height: 64rem;
+		height: ${props => props.isOpen ? "128rem" : "64rem"};
 	}
 `;
 
@@ -26,8 +26,12 @@ const StyledContent = styled.div`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	align-items: center;
+
+	@media (min-width: 80.0rem) {
+		justify-content: space-evenly;
+	}
 `
 
 const StyledCase = styled.div`
@@ -199,13 +203,13 @@ const StyledPseudoBlockFour = styled.div`
 
 const StyledWebLink = styled.a`
 	position: absolute;
-	font-size: 1.5rem;
-	bottom: -3rem;
-	right: 0;
+	font-size: 1rem;
+	bottom: 1rem;
+	right: 1rem;
 	font-family: futura-pt, sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 	cursor: pointer;
 	z-index: 99;
 
@@ -214,6 +218,7 @@ const StyledWebLink = styled.a`
 		font-size: 1.5rem;
 		bottom: 2rem;
 		right: 4rem;
+		font-weight: 400;
 	}
 
 	@media (min-width: 80.0rem) {
@@ -239,13 +244,13 @@ const StyledWebLink = styled.a`
 
 const StyledInstaLink = styled.a`
 	position: absolute;
-	font-size: 1.5rem;
-	bottom: -3rem;
+	font-size: 1rem;
+	bottom: 1rem;
 	right: 6rem;
 	font-family: futura-pt, sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 	cursor: pointer;
 	z-index: 99;
 
@@ -254,6 +259,7 @@ const StyledInstaLink = styled.a`
 		font-size: 1.5rem;
 		bottom: 2rem;
 		right: 12rem;
+		font-weight: 400;
 	}
 
 	@media (min-width: 80.0rem) {
@@ -278,10 +284,55 @@ const StyledInstaLink = styled.a`
 `
 
 const StyledCaseDescription = styled.p`
-	font-size: 1.5rem;
+	font-size: 1rem;
 	color: #fff;
 	font-family: futura-pt, sans-serif;
+	font-weight: 300;
+	margin-top: 6rem;
+	display: ${props => props.isOpen ? "flex" : "none"};
+
+	@media (min-width: 80.0rem) {
+		font-size: 1.5rem;
+		margin-top: 0;
+	}
+`
+
+const StyledAboutButton = styled.button`
+	background: none;
+	border: none;
+	font-family: futura-pt, sans-serif;
 	font-weight: 400;
+	font-size: 1.5rem;
+	margin: 3rem 0;
+	text-decoration: none;
+	color: #fff;
+	padding: 0;
+	cursor: pointer;
+
+	@media (min-width: 80.0rem) {
+		font-size: 1.5rem;
+		position: relative;
+	}
+
+	@media (min-width: 80.0rem) {
+		:after {
+			content: "";
+			position: absolute;
+			bottom: -.25rem;
+			width: 0px;
+			height: .125rem;
+			margin: .125rem 0 0;
+			transition: all .3s ease-in;
+			opacity: 0;
+			left: 0;
+			background: #fff;
+		}
+
+		:hover:after {
+			width: 100%;
+			opacity: 1;
+		}
+	}
 `
 
 const CaseContent = () => {
@@ -302,23 +353,47 @@ const CaseContent = () => {
 	);
 }
 
-const Work = () => (
-	<StyledBackground>
-		<StyledBackgroundContainer>
-			<StyledContent>
-				<StyledCase>
-					<StyledCaseBorder>
-						<StyledCaseTitle>Come and Meow</StyledCaseTitle>
-						<CaseContent />
-					</StyledCaseBorder>
-				</StyledCase>
-				<StyledCaseDescription>
-					Come and Meow<br />
-					Best coffee and food in a refined but relaxed setting.<br/>
-				</StyledCaseDescription>
-			</StyledContent>
-		</StyledBackgroundContainer>
-	</StyledBackground>
-);
+class Work extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {isOpen: false};
+
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	handleClick() {
+    this.setState(state => ({
+      isOpen: !state.isOpen
+    }));
+  }
+
+	render() {
+		return (
+			<StyledBackground isOpen={this.state.isOpen}>
+				<StyledBackgroundContainer>
+					<StyledContent>
+						<StyledCase>
+							<StyledCaseBorder>
+								<StyledCaseTitle>Come and Meow</StyledCaseTitle>
+								<CaseContent />
+							</StyledCaseBorder>
+						</StyledCase>
+						<StyledCaseDescription isOpen={this.state.isOpen} key={this.state.isOpen ? 'open' : 'closed'}>
+							Кофе — самый маржинальный продукт в сегменте HoReCa. <br />
+							За последние 5 лет спрос на кофе в Украине возрос на 23%. По данным Craft Foods Ukraine, в 2018 году в Украине выпили 75 тыс. тонн кофе. Востребованность формата «кофе с собой» обусловлена быстрым образом жизни, запрете курения в помещении и массой других причин. В общем, сегмент ещё ого-го, именно поэтому мы приняли решения упаковать кофейню. <br />
+							<br />
+							При разработке бренда «come&meow», мы специально отказались от почти всех визуальных кофейных маркеров. Не использовали стандартную кофейную цветовую гамму, что позволило бренду сильно выделиться на фоне массы конкурентов. Дизайн вызывает ассоциации с нежностью, теплом и природой. <br />
+							<br />
+							По данным исследования «БелБизнесКонсалтинг», самая насыщенная возрастная категория любителей кофе-баров и кофеен — 40-55 лет. И подавляющее большинство— женщин. Исходя из этого мы постарались сделать так, чтобы образ был для них интересным, вызывал приятные ассоциации, желание вернутся, сделать фото на фоне постеров или селфи со стаканчиком. Кстати о них, стаканчики — это очень важный рекламный носитель. Гости уносят покупку, таким образом являя вас общественности, поэтому мы уделили им особое внимание и указали на них адрес и ссылки на сайт и соцсети. <br />
+							<br />
+							В итоге, из-за присутствующего разнообразия в рынке кофейных заведений дизайн требует решительных и ярких решений, чтобы качественно выделиться на фоне остальных и способствовать дальнейшему продвижению.
+						</StyledCaseDescription>
+						<StyledAboutButton onClick={this.handleClick} >{this.state.isOpen ? "Close" : "Learn More"}</StyledAboutButton>
+					</StyledContent>
+				</StyledBackgroundContainer>
+			</StyledBackground>
+		);
+	}
+}
 
 export default Work;
