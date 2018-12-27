@@ -5,17 +5,18 @@ import test from "../images/comemeow.jpg"
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: ${props => props.isOpen ? "86rem" : "28rem"};
+	height: auto;
 	background: #191919;
 	box-shadow: 0 -0.25rem .5rem rgba(0,0,0,.16);
 
 	@media (min-width: 80.0rem) {
-		height: ${props => props.isOpen ? "96rem" : "64rem"};
+		height: auto;
 	}
 `;
 
 const StyledBackgroundContainer = styled.div`
 	width: 100%;
+	padding: 4rem 0;
 	max-width: 90rem;
 	height: 100%;
 	margin: 0 auto;
@@ -313,7 +314,7 @@ const StyledCaseDescription = styled.p`
 
 	@media (min-width: 80.0rem) {
 		font-size: 1.5rem;
-		margin-top: 0;
+		margin-top: 4rem;
 	}
 `
 
@@ -332,6 +333,7 @@ const StyledAboutButton = styled.button`
 	@media (min-width: 80.0rem) {
 		font-size: 1.5rem;
 		position: relative;
+		margin-top: 4rem;
 	}
 
 	@media (min-width: 80.0rem) {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: 50rem;
+	height: auto;
 	background: #191919;
 	box-shadow: inset 0 0 1rem rgba(0,0,0,.32);
 `;
@@ -11,6 +11,7 @@ const StyledBackground = styled.div`
 const StyledBackgroundContainer = styled.div`
 	width: 100%;
 	max-width: 90rem;
+	padding: 4rem 0 0rem;
 	height: 100%;
 	margin: 0 auto;
 `;

@@ -19,6 +19,7 @@ const StyledBackground = styled.div`
 
 const StyledBackgroundContainer = styled.div`
 	width: 90%;
+	padding: 4rem 0;
 	max-width: 90rem;
 	height: 100%;
 	margin: 0 auto;
