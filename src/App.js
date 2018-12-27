@@ -7,6 +7,9 @@ import About from './components/about';
 import Contact from './components/contact';
 import Home from './components/home'
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-131382769-1');
+
 class App extends Component {
   render() {
     return (

@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-import test from "../images/test.jpg"
+import test from "../images/comemeow.jpg"
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: ${props => props.isOpen ? "82rem" : "24rem"};
+	height: ${props => props.isOpen ? "86rem" : "28rem"};
 	background: #191919;
 	box-shadow: 0 -0.25rem .5rem rgba(0,0,0,.16);
 
 	@media (min-width: 80.0rem) {
-		height: ${props => props.isOpen ? "128rem" : "64rem"};
+		height: ${props => props.isOpen ? "96rem" : "64rem"};
 	}
 `;
 
 const StyledBackgroundContainer = styled.div`
-	width: 90%;
+	width: 100%;
 	max-width: 90rem;
 	height: 100%;
 	margin: 0 auto;
@@ -36,7 +36,7 @@ const StyledContent = styled.div`
 
 const StyledCase = styled.div`
 	width: 100%;
-	height: 14rem;
+	height: auto;
 
 	@media (min-width: 40.0rem) {
 		height: 24rem;
@@ -50,32 +50,37 @@ const StyledCaseBorder = styled.div`
 	width: 100%;
 	height: auto;
 	box-sizing: border-box;
-	padding: 4rem;
-	border: .125rem solid rgba(255,255,255,.16);
-	position: relative;
+	padding: 0 1rem;
+	border: none;
 
-	@media screen and (max-width: 60rem) {
-		padding: 0rem;
-		height: 10rem;
-		border: none;
+	@media screen and (min-width: 80rem) {
+		width: 100%;
+		height: auto;
+		box-sizing: border-box;
+		padding: 4rem;
+		border: .125rem solid rgba(255,255,255,.16);
+		position: relative;
 	}
 `
 const StyledCaseTitle = styled.h2`
-	position: absolute;
-	top: -4rem;
-	left: 0rem;
 	font-size: 2rem;
-	margin: 0;
-	padding: 0rem;
-	background: #191919;
+	padding: .5rem;
+	text-align: center;
+	border: .125rem solid #cc6666;
 	font-family: ff-tisa-web-pro, serif;
 	font-weight: 400;
-	color: #fff;
+	color: #cc6666;
 
 	@media (min-width: 80.0rem) {
+		position: absolute;
+		background: #191919;
 		top: -2rem;
 		left: 4rem;
+		text-align: left;
 		padding: 0 1rem;
+		color: #fff;
+		border: none;
+		margin: 0;
 	}
 `
 
@@ -115,11 +120,11 @@ const StyledPseudoCaseContentVideo = styled.div`
 	background-position: center top;
 
 	@media (min-width: 80.0rem) {
-		animation: mymove 20s infinite;
+		animation: mymove 10s infinite;
 
 		@keyframes mymove {
 		  0% {background-position: center top;}
-		  50% {background-position: center bottom;}
+		  50% {background-position: center center;}
 			100% {background-position: center top;}
 		}
 	}
@@ -209,7 +214,11 @@ const StyledWebLink = styled.a`
 	font-family: futura-pt, sans-serif;
 	font-weight: 600;
 	text-decoration: none;
-	color: #000;
+	color: #fff;
+	padding: .25rem .75rem;
+	border-radius: .125rem;
+	box-shadow: 0 .5rem .5rem rgba(0,0,0,0.2);
+	background: #cc6666;
 	cursor: pointer;
 	z-index: 99;
 
@@ -219,6 +228,9 @@ const StyledWebLink = styled.a`
 		bottom: 2rem;
 		right: 4rem;
 		font-weight: 400;
+		background: none;
+		box-shadow: none;
+		padding: 0;
 	}
 
 	@media (min-width: 80.0rem) {
@@ -246,11 +258,15 @@ const StyledInstaLink = styled.a`
 	position: absolute;
 	font-size: 1rem;
 	bottom: 1rem;
-	right: 6rem;
+	right: 7rem;
 	font-family: futura-pt, sans-serif;
 	font-weight: 600;
 	text-decoration: none;
-	color: #000;
+	color: #fff;
+	padding: .25rem .75rem;
+	border-radius: .125rem;
+	box-shadow: 0 .5rem .5rem rgba(0,0,0,0.2);
+	background: #cc6666;
 	cursor: pointer;
 	z-index: 99;
 
@@ -260,6 +276,9 @@ const StyledInstaLink = styled.a`
 		bottom: 2rem;
 		right: 12rem;
 		font-weight: 400;
+		background: none;
+		box-shadow: none;
+		padding: 0;
 	}
 
 	@media (min-width: 80.0rem) {
@@ -284,11 +303,12 @@ const StyledInstaLink = styled.a`
 `
 
 const StyledCaseDescription = styled.p`
+	padding: 0 1rem;
 	font-size: 1rem;
 	color: #fff;
 	font-family: futura-pt, sans-serif;
 	font-weight: 300;
-	margin-top: 6rem;
+	margin: 2rem 0 0 0;
 	display: ${props => props.isOpen ? "flex" : "none"};
 
 	@media (min-width: 80.0rem) {
@@ -302,8 +322,8 @@ const StyledAboutButton = styled.button`
 	border: none;
 	font-family: futura-pt, sans-serif;
 	font-weight: 400;
-	font-size: 1.5rem;
-	margin: 3rem 0;
+	font-size: 1.25rem;
+	margin: 1.5rem 0 0 0;
 	text-decoration: none;
 	color: #fff;
 	padding: 0;

@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 const StyledBackground = styled.div`
 	width: 100%;
-	height: 44rem;
+	height: 50rem;
 	background: #191919;
+	box-shadow: inset 0 0 1rem rgba(0,0,0,.32);
 `;
 
 const StyledBackgroundContainer = styled.div`
-	width: 90%;
+	width: 100%;
 	max-width: 90rem;
 	height: 100%;
 	margin: 0 auto;
@@ -17,6 +18,8 @@ const StyledBackgroundContainer = styled.div`
 const StyledContent = styled.div`
 	height: 100%;
 	width: 100%;
+	padding: 0 1rem;
+	box-sizing: border-box;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -51,16 +54,22 @@ const StyledContactFormBlock = styled.div`
 `
 
 const StyledContactTitle = styled.h2`
+	width: 100%;
+	padding: .5rem;
 	text-align: center;
+	border: .125rem solid #cc6666;
 	font-family: ff-tisa-web-pro, serif;
 	font-weight: 400;
-	font-size: 2rem;
-	margin-top: 2rem;
 	color: #cc6666;
-	margin: 0;
+	font-size: 2rem;
+	margin: 1rem 0;
 
 	@media (min-width: 80.0rem) {
 		font-size: 4rem;
+		width: auto;
+		padding: 0;
+		text-align: center;
+		border: none;
 	}
 `
 
@@ -89,6 +98,19 @@ const StyledSocialLink = styled.a`
 	cursor: pointer;
 	margin: 2rem 2rem 0;
 
+	:after {
+		content: "";
+		position: absolute;
+		bottom: -.25rem;
+		width: 100%;
+		height: .125rem;
+		margin: .125rem 0 0;
+		transition: all .3s ease-in;
+		opacity: 1;
+		left: 0;
+		background: #fff;
+	}
+
 	@media (min-width: 80.0rem) {
 		margin: 0 2rem 0 0;
 
@@ -113,9 +135,12 @@ const StyledSocialLink = styled.a`
 `
 
 const StyledContactForm = styled.form`
+	width: 100%;
+	max-width: 24rem;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 2rem;
+	padding: 2rem 0;
+	box-sizing: border-box;
 `
 
 const StyledContactFormTitle = styled.h3`
@@ -170,7 +195,7 @@ const Contact = () => (
 					<StyledSocialLink href="https://www.facebook.com/Guerrilla-Studios-877863072550834">Facebook</StyledSocialLink>
 				</StyledContactInfoBlock>
 				<StyledContactFormBlock>
-					<StyledContactForm name="contact" method="post" action="/">
+					<StyledContactForm name="contact" method="post" action="https://mailthis.to/awesomedixde@gmail.com" encType="multipart/form-data">
 						<input type="hidden" name="form-name" value="contact" />
 						<StyledContactFormTitle>Full Name</StyledContactFormTitle>
 						<StyledContactFormInput type="name" name="name" placeholder="Ivan Ivanov" />

@@ -20,7 +20,7 @@ const StyledHeaderContainer = styled.div`
 `;
 
 const StyledLogo = styled.div`
-	width: 16rem;
+	width: 18rem;
 	height: 4rem;
 	display: flex;
 	justify-content: center;

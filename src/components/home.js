@@ -40,30 +40,18 @@ const StyledSloganContainer = styled.div`
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 
 	@media (min-width: 80.0rem) {
 		height: 100%;
-	}
-`
-
-const StyledSlogan = styled.div`
-	width: 100%;
-	box-sizing: border-box;
-	height: 12rem;
-	padding: 3rem 1rem;
-	display: flex;
-
-	@media (min-width: 80.0rem) {
-		width: 100%;
-		height: 28rem;
 		justify-content: flex-start;
 	}
-`;
+`
 
 const StyledSloganText = styled.h2`
 	font-family: futura-pt, sans-serif;
 	font-weight: 700;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: #cc6666;
 
 	@media (min-width: 80.0rem) {
@@ -71,24 +59,10 @@ const StyledSloganText = styled.h2`
 	}
 `;
 
-const StyledSubSlogan = styled.div`
-	width: 100%;
-	height: 10rem;
-	box-sizing: border-box;
-	padding: 3rem 1rem;
-	display: flex;
-	justify-content: center;
-
-	@media (min-width: 80.0rem) {
-		width: 100%;
-		justify-content: flex-start;
-	}
-`;
-
 const StyledSubSloganText = styled.h3`
 	font-family: ff-tisa-web-pro, serif;
 	font-weight: 400;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	color: #fff;
 
 	@media (min-width: 80.0rem) {
@@ -104,7 +78,7 @@ const StyledAnimatedLogoContainer = styled.div`
 	@media (min-width: 80.0rem) {
 		display: block;
 		width: 50%;
-		padding: 4rem 0;
+		padding: 12rem 0;
 	}
 `
 
@@ -188,18 +162,18 @@ const Home = () => (
 		<StyledBackgroundContainer>
 			<StyledContent>
 				<StyledSloganContainer>
-					<StyledSlogan>
-						<StyledSloganText>
-							Technology. <br />
-							Passion. <br />
-							Marketing.
-						</StyledSloganText>
-					</StyledSlogan>
-					<StyledSubSlogan>
-						<StyledSubSloganText>
-							Guerrilla studios — is a business investment that enabling you to shift from spontaneous ad campaigns to consistent brand management, multiply conversion and recognition.
-						</StyledSubSloganText>
-					</StyledSubSlogan>
+
+					<StyledSloganText>
+						Branding. <br />
+						Media Production. <br />
+						Development.
+					</StyledSloganText>
+
+
+					<StyledSubSloganText>
+						Guerrilla Studios – providing uniqueness for your business by combining time-proven and forward practices in branding along with development and media production. Excellent customer service at reasonable price. Based in Kyiv.
+					</StyledSubSloganText>
+
 				</StyledSloganContainer>
 				<StyledAnimatedLogoContainer>
 					<StyledAnimatedLogo>

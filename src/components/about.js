@@ -40,9 +40,10 @@ const StyledAboutText = styled.h2`
 	font-weight: 600;
 	font-size: 1.5rem;
 	color: #fff;
+	margin: 2rem 0 0 0;
 
 	@media (min-width: 80.0rem) {
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 `
 
@@ -172,7 +173,7 @@ class About extends React.Component {
 			<StyledBackground>
 				<StyledBackgroundContainer>
 					<StyledContent>
-						<StyledAboutText>Team of professionals, motivated due to a system of partnership and results-focus, that has everything to turn your ideal vision into a fully functioning reality.</StyledAboutText>
+						<StyledAboutText>Experienced team with complete market knowledge aimed on yours outcome.</StyledAboutText>
 						<CSSTransitionGroup
 							transitionName="team"
 							transitionEnterTimeout={500}
