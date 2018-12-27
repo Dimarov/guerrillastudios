@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import test from "../images/comemeow.jpg"
+import cardone from "../images/comemeowcardone.jpg"
+import cardtwo from "../images/comemeowcardtwo.jpg"
+import poster from "../images/comemeowposter.jpg"
 
 const StyledBackground = styled.div`
 	width: 100%;
@@ -357,6 +360,16 @@ const StyledAboutButton = styled.button`
 	}
 `
 
+const StyledCaseImage = styled.img`
+	display: ${props => props.isOpen ? "flex" : "none"};
+	margin: 2rem 0 0 0;
+	width: 100%;
+	padding: 0 1rem;
+	box-sizing: border-box;
+	max-width: 36rem;
+	box-shadow: 0 1rem 1rem #000;
+`
+
 const CaseContent = () => {
 	return (
 		<StyledCaseContent>
@@ -404,10 +417,17 @@ class Work extends React.Component {
 							Кофе — самый маржинальный продукт в сегменте HoReCa. <br />
 							За последние 5 лет спрос на кофе в Украине возрос на 23%. По данным Craft Foods Ukraine, в 2018 году в Украине выпили 75 тыс. тонн кофе. Востребованность формата «кофе с собой» обусловлена быстрым образом жизни, запрете курения в помещении и массой других причин. В общем, сегмент ещё ого-го, именно поэтому мы приняли решения упаковать кофейню. <br />
 							<br />
+						</StyledCaseDescription>
+						<StyledCaseImage src={cardone} alt="card" isOpen={this.state.isOpen} key={this.state.isOpen ? 'open' : 'closed'} />
+						<StyledCaseImage src={cardtwo} alt="card" isOpen={this.state.isOpen} key={this.state.isOpen ? 'open' : 'closed'} />
+						<StyledCaseDescription isOpen={this.state.isOpen} key={this.state.isOpen ? 'open' : 'closed'}>
 							При разработке бренда «come&meow», мы специально отказались от почти всех визуальных кофейных маркеров. Не использовали стандартную кофейную цветовую гамму, что позволило бренду сильно выделиться на фоне массы конкурентов. Дизайн вызывает ассоциации с нежностью, теплом и природой. <br />
 							<br />
 							По данным исследования «БелБизнесКонсалтинг», самая насыщенная возрастная категория любителей кофе-баров и кофеен — 40-55 лет. И подавляющее большинство— женщин. Исходя из этого мы постарались сделать так, чтобы образ был для них интересным, вызывал приятные ассоциации, желание вернутся, сделать фото на фоне постеров или селфи со стаканчиком. Кстати о них, стаканчики — это очень важный рекламный носитель. Гости уносят покупку, таким образом являя вас общественности, поэтому мы уделили им особое внимание и указали на них адрес и ссылки на сайт и соцсети. <br />
 							<br />
+						</StyledCaseDescription>
+						<StyledCaseImage src={poster} alt="poster" isOpen={this.state.isOpen} key={this.state.isOpen ? 'open' : 'closed'} />
+						<StyledCaseDescription isOpen={this.state.isOpen} key={this.state.isOpen ? 'open' : 'closed'}>
 							В итоге, из-за присутствующего разнообразия в рынке кофейных заведений дизайн требует решительных и ярких решений, чтобы качественно выделиться на фоне остальных и способствовать дальнейшему продвижению.
 						</StyledCaseDescription>
 						<StyledAboutButton onClick={this.handleClick} >{this.state.isOpen ? "Close" : "Learn More"}</StyledAboutButton>
