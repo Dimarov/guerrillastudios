@@ -8,6 +8,7 @@ import tonya from "../images/people/tonya.png"
 import vitaliy from "../images/people/vitaliy.png"
 import kostya from "../images/people/kostya.png"
 import dima from "../images/people/dima.png"
+import svyatoslav from "../images/people/svyatoslav.png"
 
 const StyledBackground = styled.div`
 	width: 100%;
@@ -196,15 +197,21 @@ class About extends React.Component {
 									<StyledDescription>Web-Development, UI/UX Design</StyledDescription>
 								</StyledPerson>
 								<StyledPerson>
+									<StyledPhoto src={dima} />
+									<StyledName>Dmytro Kondakov</StyledName>
+									<StyledDescription>Graphic Design, UI/UX Design, Web-Development</StyledDescription>
+								</StyledPerson>
+								<StyledPerson>
+									<StyledPhoto src={svyatoslav} />
+									<StyledName>Svyatoslav Naumenko</StyledName>
+									<StyledDescription>Project Managment, Copyright, Social Media</StyledDescription>
+								</StyledPerson>
+								<StyledPerson>
 									<StyledPhoto src={vitaliy} />
 									<StyledName>Vitaliy Siomochkin</StyledName>
 									<StyledDescription>Project Managment, Copyright, Social Media</StyledDescription>
 								</StyledPerson>
-								<StyledPerson>
-									<StyledPhoto src={dima} />
-									<StyledName>Dmytro Kondakov</StyledName>
-									<StyledDescription>Project Managment, UI/UX Design, Web-Development</StyledDescription>
-								</StyledPerson>
+								
 							</StyledPhotoContainer>
 						</CSSTransitionGroup>
 						<StyledAboutButton onClick={this.handleClick} >{this.state.isOpen ? "Close" : "Our Team"}</StyledAboutButton>

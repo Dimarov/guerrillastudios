@@ -11,7 +11,7 @@ const StyledBackground = styled.div`
 const StyledBackgroundContainer = styled.div`
 	width: 100%;
 	max-width: 90rem;
-	padding: 4rem 0 0rem;
+	padding: 4rem 0 2rem;
 	height: 100%;
 	margin: 0 auto;
 `;
@@ -192,11 +192,11 @@ const Contact = () => (
 				<StyledContactInfoBlock>
 					<StyledContactTitle>Contact Us</StyledContactTitle>
 					<StyledContactText>We’ll answer you in less than 3 hours</StyledContactText>
-					<StyledSocialLink href="https://www.instagram.com/guerrilla.creative/">Instagram</StyledSocialLink>
+					<StyledSocialLink href="https://www.instagram.com/guerrillacreative/">Instagram</StyledSocialLink>
 					<StyledSocialLink href="https://www.facebook.com/Guerrilla-Studios-877863072550834">Facebook</StyledSocialLink>
 				</StyledContactInfoBlock>
 				<StyledContactFormBlock>
-					<StyledContactForm name="contact" method="post" action="https://mailthis.to/awesomedixde@gmail.com" encType="multipart/form-data">
+					<StyledContactForm name="contact" method="post" action="https://formspree.io/awesomedixde@gmail.com">
 						<input type="hidden" name="form-name" value="contact" />
 						<StyledContactFormTitle>Full Name</StyledContactFormTitle>
 						<StyledContactFormInput type="name" name="name" placeholder="Ivan Ivanov" />
